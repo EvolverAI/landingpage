@@ -18,20 +18,27 @@
       </button>
       <nav id="menu" class="hidden md:flex space-x-4">
         <a href="#company" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'company')">
-        <i class="material-icons mr-2">business</i> Company
+          <i class="material-icons mr-2">business</i> Company
         </a>
         <a href="#product" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'product')">
-        <i class="material-icons mr-2">settings</i> Product
+          <i class="material-icons mr-2">settings</i> Product
         </a>
         <a href="#" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'clients')">
-        <i class="material-icons mr-2">lock</i> Clients
+          <i class="material-icons mr-2">lock</i> Clients
         </a>
         <a href="#contact" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'contact')">
-        <i class="material-icons mr-2">headset_mic</i> Contact
+          <i class="material-icons mr-2">headset_mic</i> Contact
         </a>
       </nav>
 
       <script>
+        const menuButton = document.getElementById('menu-button');
+          const menu = document.getElementById('menu');
+
+          menuButton.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+          });
+
         function scrollToSection(event, sectionId) {
         event.preventDefault();
         const section = document.getElementById(sectionId);
@@ -43,15 +50,6 @@
       </div>
     </header>
 
-    <script>
-      const menuButton = document.getElementById('menu-button');
-      const menu = document.getElementById('menu');
-
-      menuButton.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-    </script>
-
     <main class="space-y-16">
       <!-- Hero section -->
       <section id="company" class="relative bg-custom-slate py-12 bg-center bg-cover" style="min-height: 600px;">
@@ -59,7 +57,7 @@
         <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
           <div class="p-8 rounded-lg text-justify max-w-lg">
             <p class="p-noto-sans top-bottom-margins md:text-lg">
-              <i class="material-icons text-yellow-500 mr-2">lightbulb</i>
+              <i class="material-icons text-yellow-300 mr-2">lightbulb</i>
               We believe in a world where Artificial Intelligence simplifies complexity and drives sustainable success for businesses. Our mission is to
               make cutting-edge AI accessible and impactful for companies of all sizes.
             </p>
