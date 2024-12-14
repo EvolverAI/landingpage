@@ -4,29 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workforce Manager - Integrated AI Solutions</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans:wght@800;400;300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'custom-slate': '#0f172a',
-            },
-            fontFamily: {
-              'roboto': ['Roboto', 'sans-serif'],
-              'noto-sans': ['"Noto Sans"', 'sans-serif'],
-            }
-          }
-        }
-      }
-    </script>
+    <link href="tailwind.css" rel="stylesheet">
   </head>
   <body class="bg-custom-slate text-gray-200 font-roboto">
-    <header class="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-4 mb-8">
+    <header class="bg-gradient-to-r from-slate-900 to-slate-950 text-white py-4 mb-8">
       <div class="container mx-auto px-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">EvolverAI GmbH</h1>
+        <h1 class="text-2xl font-bold">Evolver<span class="text-blue-800">AI</span></h1>
         <button id="menu-button" class="md:hidden focus:outline-none">
           <i class="material-icons md-24">menu</i>
         </button>
@@ -54,26 +39,137 @@
     </script>
 
     <main class="space-y-16">
-      <section id="company" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed" style="background-image: url('img/evolverai-web-company-bg.png'); min-height: 600px;">
+      <!-- Hero section -->
+      <section id="company" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed" style="min-height: 600px;">
+        
+        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
+          <div class="p-8 rounded-lg text-justify max-w-lg">
+            <p class="p-noto-sans top-bottom-margins md:text-lg">
+              <i class="material-icons text-yellow-500 mr-2">lightbulb</i>
+              We believe in a world where Artificial Intelligence simplifies complexity and drives sustainable success for businesses. Our mission is to
+              make cutting-edge AI accessible and impactful for companies of all sizes.
+            </p>
+          </div>
+        </div>
+        <div class="w-full text-center py-8">
+          <h1 class="font-bold text-white text-[20vw] leading-none w-full text-center">
+            <span class="inline-block">Evolver</span><span class="text-blue-800 inline-block">AI</span>
+          </h1>
+        </div>
+      </section>
+
+        <section id="about" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed"
+          style="background-image: url('img/evolverai-web-company-bg.jpg'); min-height: 600px;">
+          <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+          <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
+            <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-lg">
+              <p class="p-noto-sans top-bottom-margins md:text-lg">
+                At Evolver<span class="text-blue-800">AI</span>, we specialize in developing smart, innovative solutions that empower companies to thrive in the
+                modern digital landscape. By seamlessly integrating Artificial Intelligence into your business processes, we help
+                you unlock new levels of efficiency, accuracy, and growth.
+              </p>
+            </div>
+          </div>
+        </section>
+
+      <section id="brainstorming" class="relative bg-custom-slate py-12">
+        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
+          <h2 class="h2-noto-sans mb-4">What we do</h2>
+        </div>
+        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
+          <div class="p-8 rounded-lg max-w-full"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+              <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <span class="material-icons text-blue-600 text-4xl mb-4">check_circle</span>
+                <h3 class="font-semibold mb-2">Customized AI Solutions</h3>
+                <p class="text-center">
+                  Tailored systems that meet your unique business needs.
+                </p>
+              </div>
+              <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <span class="material-icons text-blue-600 text-4xl mb-4">insights</span>
+                <h3 class="font-semibold mb-2">Data-Driven Insights</h3>
+                <p class="text-center">
+                  Advanced analytics to transform your data into actionable strategies.
+                </p>
+              </div>
+              <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <span class="material-icons text-blue-600 text-4xl mb-4">automation</span>
+                <h3 class="font-semibold mb-2">Process Automation</h3>
+                <p class="text-center">
+                  Streamlined workflows to save time and reduce costs.
+                </p>
+              </div>
+              <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
+                <span class="material-icons text-blue-600 text-4xl mb-4">scale</span>
+                <h3 class="font-semibold mb-2">Scalable Systems</h3>
+                <p class="text-center">
+                  Future-ready technologies that grow with your business.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="brainstorming" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed"
+        style="background-image: url('img/evolverai-web-brainstorming-bg.jpg'); min-height: 600px;">
         <div class="absolute inset-0 bg-black bg-opacity-10"></div>
         <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
-          <div class="bg-black bg-opacity-75 p-8 rounded-lg text-right max-w-md">
-            <h2 class="text-[40px] font-semibold italic font-noto-sans mb-4">EvolverAI GmbH</h2>
-            <p class="text-lg md:text-xl font-semibold">
-              Delivering innovative solutions to empower your business operations.
+          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-lg">
+            <p class="p-noto-sans top-bottom-margins md:text-lg">
+              At Evolver<span class="text-blue-800">AI</span>, we are waiting for you
+              to join us in the journey of innovation and growth. We are here to
+              help you unlock the potential of AI and transform your business
+              operations. Let's brainstorm together and create a brighter future
+              for your company.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="product" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed" style="background-image: url('img/evolverai-web-wfm-bg.png'); min-height: 600px;">
+      <!-- Features section -->
+      <section id="features" class="bg-custom-slate py-12">
+        <div class="container mx-auto px-4 py-8">
+          <h2 class="h2-noto-sans">Where EvolverAI stands out for our commitment to</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 mt-4">
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
+              <span class="material-icons text-blue-600 text-4xl mb-4">check_circle</span>
+              <h3 class="font-semibold mb-2">Practical AI Applications</h3>
+              <p class="text-center">
+                Delivering practical AI applications that create immediate value.
+              </p>
+            </div>
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
+              <span class="material-icons text-blue-600 text-4xl mb-4">handshake</span>
+              <h3 class="font-semibold mb-2">Client Collaboration</h3>
+              <p class="text-center">
+                Collaborating closely with our clients to understand their challenges and goals.
+              </p>
+            </div>
+            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
+              <span class="material-icons text-blue-600 text-4xl mb-4">lightbulb</span>
+              <h3 class="font-semibold mb-2">Forward-Thinking Technology</h3>
+              <p class="text-center">
+                Maintaining a forward-thinking approach to technology and innovation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product WFM section -->
+      <section id="product_wfm" class="relative bg-custom-slate py-12">
         <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
-          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-left max-w-md">
-            <h2 class="text-[40px] font-semibold italic font-noto-sans mb-4">
-              Our Flagship Product: Workforce Manager
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-start items-center h-full relative z-10">
+          <div class="w-full md:w-1/2 mb-4 md:mb-0">
+            <img src="img/evolverai-web-wfm-bg.jpg" alt="Workforce Manager" class="rounded-lg shadow-lg">
+          </div>
+          <div class="w-full md:w-1/2 p-6 rounded-lg text-left flex flex-col justify-start">
+            <h2 class="h2-noto-sans mb-4">
+              Workforce Manager
             </h2>
-            <p class="text-base md:text-lg">
+            <p class="p-noto-sans md:text-lg">
               Workforce Manager is an advanced tool designed to streamline shift
               planning and workforce management. Harness the power of AI and an
               automated chatbot for efficient communication, scheduling, and
@@ -83,12 +179,37 @@
         </div>
       </section>
 
-      <section id="contact" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed" style="background-image: url('img/evolverai-web-contact-bg.png'); min-height: 600px;">
+      <!-- Product Elysia section -->
+      <section id="product_elysia" class="relative bg-custom-slate py-12">
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-start items-center h-full relative z-10">
+          <div class="w-full md:w-1/2 p-6 rounded-lg text-left flex flex-col justify-start">
+            <h2 class="h2-noto-sans mb-4">
+              Elysia: Your AI-Powered Assistant
+            </h2>
+            <p class="p-noto-sans md:text-lg">
+              Elysia is more than just a bot—it's your organization's new best friend. Powered by cutting-edge AI, Elysia streamlines
+              operations by automating repetitive tasks and reducing workloads, giving your team more time to focus on what truly
+              matters.
+              Whether it's managing workflows, handling routine queries, or optimizing processes, Elysia works tirelessly behind the
+              scenes to boost efficiency and productivity. Say goodbye to manual effort and hello to a smarter, more seamless way of
+              working.
+              Transform your organization with Elysia and unlock the potential of AI today!
+            </p>
+          </div>
+          <div class="w-full md:w-1/2 mb-4 md:mb-0">
+            <img src="img/evolverai-web-elysia-bg.jpg" alt="Elysia" class="rounded-lg shadow-lg">
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section -->
+      <section id="contact" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed" style="background-image: url('img/evolverai-web-contact-bg.jpg'); min-height: 600px;">
         <div class="absolute inset-0 bg-black bg-opacity-10"></div>
         <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
           <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-md">
-            <h2 class="text-[40px] font-semibold italic font-noto-sans mb-4">Contact Us</h2>
-            <p class="text-base md:text-lg mb-4">
+            <h2 class="h2-noto-sans mb-4">Contact Us</h2>
+            <p class="p-noto-sans md:text-lg mb-4">
               Have questions or want to learn more? Reach out to us, and we’ll get
               back to you promptly.
             </p>
@@ -103,8 +224,56 @@
       </section>
     </main>
 
-    <footer class="bg-blue-800 text-gray-200 py-4 text-center">
-      <p>&copy; 2024 EvolverAI GmbH. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-200 py-8">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start">
+        <!-- 3/4 Section -->
+        <div class="md:w-2/4 mb-8 md:mb-0">
+          <h2 class="text-2xl font-bold mb-4">Let's talk, tell us about your needs</h2>
+          <p class="mb-4">
+            We are here to help you unlock the potential of AI and transform your business operations. Let's brainstorm together and create a brighter future for your company.
+          </p>
+          <button onclick="window.location.href='form.html';"
+            class="bg-green-600 text-white py-2 px-4 rounded-lg text-lg shadow-lg hover:bg-green-700 transition duration-300">
+            Tell us about your project
+          </button>
+        </div>
+        <!-- 1/4 Section -->
+        <div class="md:w-1/4 flex flex-col space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <h3 class="h3-noto-sans">Email:</h3>
+                <a href="mailto:info@evolverai.ch" class="underline">info@evolverai.ch</a>
+              </div>
+              <div>
+                <h3 class="h3-noto-sans">Phone:</h3>
+                <a href="tel:+41792156801" class="underline">+41 79 215 6801</a>
+              </div>
+              <div class="col-span-2">
+                <h3 class="h3-noto-sans">Address:</h3>
+                <p>EvolverAI GmbH</p>
+                <p>Zwydenweg, 3</p>
+                <p>CH-6052 Hergiswil</p>
+                <p>Switzerland</p>
+              </div>
+            </div>
+          <div class="flex space-x-4 mt-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <p class="text-center">&copy; 2024 Evolver<span class="text-blue-800">AI</span> GmbH. All rights reserved.</p>
     </footer>
   </body>
 </html>
