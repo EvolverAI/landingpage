@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workforce Manager - Integrated AI Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'custom-slate': '#0f172a',
+            },
+            fontFamily: {
+              'roboto': ['Roboto', 'sans-serif'],
+              'noto-sans': ['"Noto Sans"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-custom-slate text-gray-200 font-roboto">
+    <header class="bg-gradient-to-r from-blue-400 to-blue-600 text-white py-4 mb-8">
+      <div class="container mx-auto px-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">EvolverAI GmbH</h1>
+        <button id="menu-button" class="md:hidden focus:outline-none">
+          <i class="material-icons md-24">menu</i>
+        </button>
+        <nav id="menu" class="hidden md:flex space-x-4">
+          <a href="#company" class="text-white px-2 py-1 hover:underline flex items-center">
+            <i class="material-icons mr-2">business</i> Company
+          </a>
+          <a href="#product" class="text-white px-2 py-1 hover:underline flex items-center">
+            <i class="material-icons mr-2">settings</i> Product
+          </a>
+          <a href="#contact" class="text-white px-2 py-1 hover:underline flex items-center">
+            <i class="material-icons mr-2">headset_mic</i> Contact
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <script>
+      const menuButton = document.getElementById('menu-button');
+      const menu = document.getElementById('menu');
+
+      menuButton.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    </script>
+
+    <main class="space-y-16">
+      <section id="company" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed" style="background-image: url('img/evolverai-web-company-bg.png'); min-height: 600px;">
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
+          <div class="bg-black bg-opacity-75 p-8 rounded-lg text-right max-w-md">
+            <h2 class="text-[40px] font-semibold italic font-noto-sans mb-4">EvolverAI GmbH</h2>
+            <p class="text-lg md:text-xl font-semibold">
+              Delivering innovative solutions to empower your business operations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="product" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed" style="background-image: url('img/evolverai-web-wfm-bg.png'); min-height: 600px;">
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
+          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-left max-w-md">
+            <h2 class="text-[40px] font-semibold italic font-noto-sans mb-4">
+              Our Flagship Product: Workforce Manager
+            </h2>
+            <p class="text-base md:text-lg">
+              Workforce Manager is an advanced tool designed to streamline shift
+              planning and workforce management. Harness the power of AI and an
+              automated chatbot for efficient communication, scheduling, and
+              productivity enhancements.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="relative bg-custom-slate py-12 bg-center bg-cover bg-fixed" style="background-image: url('img/evolverai-web-contact-bg.png'); min-height: 600px;">
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
+          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-md">
+            <h2 class="text-[40px] font-semibold italic font-noto-sans mb-4">Contact Us</h2>
+            <p class="text-base md:text-lg mb-4">
+              Have questions or want to learn more? Reach out to us, and we’ll get
+              back to you promptly.
+            </p>
+            <button
+              onclick="window.location.href='contact.html';"
+              class="bg-blue-600 text-white py-2 px-4 rounded-lg text-lg shadow-lg hover:bg-blue-700 transition duration-300"
+            >
+              Get in Touch
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-blue-800 text-gray-200 py-4 text-center">
+      <p>&copy; 2024 EvolverAI GmbH. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
