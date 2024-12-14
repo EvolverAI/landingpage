@@ -44,13 +44,20 @@
 
     .h1-noto-sans {
         font-family: 'Noto Sans', sans-serif;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 400;
     }
 
     @media (min-width: 768px) {
         .h1-noto-sans {
-            font-size: 80px;
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+
+    @media (min-width: 1300px) {
+        .h1-noto-sans {
+            font-size: 70px;
             font-weight: 700;
         }
     }
