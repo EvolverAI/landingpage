@@ -6,29 +6,40 @@
     <title>Workforce Manager - Integrated AI Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans:wght@800;400;300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
     <link href="tailwind.css" rel="stylesheet">
   </head>
   <body class="bg-custom-slate text-gray-200 font-roboto">
-    <header class="bg-gradient-to-r from-slate-900 to-slate-950 text-white py-4 mb-8">
+    <header class="bg-gradient-to-r from-slate-900 to-slate-950 text-white py-4 mb-8 sticky top-0 z-50">
       <div class="container mx-auto px-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold">Evolver<span class="text-blue-800">AI</span></h1>
-        <button id="menu-button" class="md:hidden focus:outline-none">
-          <i class="material-icons md-24">menu</i>
-        </button>
-        <nav id="menu" class="hidden md:flex space-x-4">
-          <a href="#company" class="text-white px-2 py-1 hover:underline flex items-center">
-            <i class="material-icons mr-2">business</i> Company
-          </a>
-          <a href="#product" class="text-white px-2 py-1 hover:underline flex items-center">
-            <i class="material-icons mr-2">settings</i> Product
-          </a>
-          <a href="#" class="text-white px-2 py-1 hover:underline flex items-center">
-            <i class="material-icons mr-2">lock</i> Clients
-          </a>
-          <a href="#contact" class="text-white px-2 py-1 hover:underline flex items-center">
-            <i class="material-icons mr-2">headset_mic</i> Contact
-          </a>
-        </nav>
+      <h1 class="text-2xl font-bold">Evolver<span class="text-blue-800">AI</span></h1>
+      <button id="menu-button" class="md:hidden focus:outline-none">
+        <i class="material-icons md-24">menu</i>
+      </button>
+      <nav id="menu" class="hidden md:flex space-x-4">
+        <a href="#company" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'company')">
+        <i class="material-icons mr-2">business</i> Company
+        </a>
+        <a href="#product" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'product')">
+        <i class="material-icons mr-2">settings</i> Product
+        </a>
+        <a href="#" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'clients')">
+        <i class="material-icons mr-2">lock</i> Clients
+        </a>
+        <a href="#contact" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'contact')">
+        <i class="material-icons mr-2">headset_mic</i> Contact
+        </a>
+      </nav>
+
+      <script>
+        function scrollToSection(event, sectionId) {
+        event.preventDefault();
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        }
+      </script>
       </div>
     </header>
 
@@ -77,11 +88,10 @@
 
       <section id="brainstorming" class="relative bg-custom-slate py-12">
         <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
-          <h2 class="h2-noto-sans mb-4">What we do</h2>
+          <h1 class="h1-noto-sans mb-4">What we do</h1>
         </div>
-        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
-          <div class="p-8 rounded-lg max-w-full"></div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div class="container mx-auto px-4 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6">
               <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
                 <span class="material-icons text-blue-600 text-4xl mb-4">check_circle</span>
                 <h3 class="font-semibold mb-2">Customized AI Solutions</h3>
@@ -97,7 +107,7 @@
                 </p>
               </div>
               <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
-                <span class="material-icons text-blue-600 text-4xl mb-4">automation</span>
+                <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">automation</span>
                 <h3 class="font-semibold mb-2">Process Automation</h3>
                 <p class="text-center">
                   Streamlined workflows to save time and reduce costs.
@@ -111,7 +121,6 @@
                 </p>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -132,10 +141,12 @@
       </section>
 
       <!-- Features section -->
-      <section id="features" class="bg-custom-slate py-12">
+      <section id="features" class="relative bg-custom-slate py-12">
+        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
+          <h1 class="h1-noto-sans mb-4">Where Evolver<span class="text-blue-800">AI</span> stands out for our commitment to</h1>
+        </div>
         <div class="container mx-auto px-4 py-8">
-          <h2 class="h2-noto-sans">Where EvolverAI stands out for our commitment to</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 mt-4">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
               <span class="material-icons text-blue-600 text-4xl mb-4">check_circle</span>
               <h3 class="font-semibold mb-2">Practical AI Applications</h3>
@@ -161,8 +172,27 @@
         </div>
       </section>
 
+      <!-- Product section -->
+      <section id="product" class="relative bg-custom-slate py-12 bg-center bg-cover"
+        style="background-image: url('img/evolverai-web-products-bg.jpg'); min-height: 600px;">
+        <a name="product"></a>
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
+          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-lg">
+            <p class="p-noto-sans top-bottom-margins md:text-lg">
+              Empowering Your Vision with Innovative Software Solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+        
+
       <!-- Product WFM section -->
       <section id="product_wfm" class="relative bg-custom-slate py-12">
+        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
+          <h1 class="h1-noto-sans mb-4">Our Software Solutions</h1>
+        </div>
         <div class="absolute inset-0 bg-black bg-opacity-10"></div>
         <div class="container mx-auto px-4 flex flex-col md:flex-row justify-start items-center h-full relative z-10">
           <div class="w-full md:w-1/2 mb-4 md:mb-0">
