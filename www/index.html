@@ -14,313 +14,47 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
     <link href="tailwind.css" rel="stylesheet">
     <script src="https://elysia.evolverai.ch/static/elysiachatbot.js" type="module"></script>
+    <script src="js/components.js"></script>
   </head>
   <body class="bg-custom-slate text-gray-200 font-roboto">
-    <header class="bg-gradient-to-r from-slate-900 to-slate-950 text-white py-4 mb-8 sticky top-0 z-50">
-      <div class="container mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Evolver<span class="text-blue-800">AI</span></h1>
-      <button id="menu-button" class="md:hidden focus:outline-none">
-        <i class="material-icons md-24">menu</i>
-      </button>
-      <nav id="menu" class="hidden md:flex space-x-4">
-        <a href="#company" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'company')">
-          <i class="material-icons mr-2">business</i> Company
-        </a>
-        <a href="#product" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'product')">
-          <i class="material-icons mr-2">settings</i> Product
-        </a>
-        <a href="#" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'clients')">
-          <i class="material-icons mr-2">lock</i> Clients
-        </a>
-        <a href="#contact" class="text-white px-2 py-1 hover:underline flex items-center" onclick="scrollToSection(event, 'contact')">
-          <i class="material-icons mr-2">headset_mic</i> Contact
-        </a>
-      </nav>
-
-      <script>
-        const menuButton = document.getElementById('menu-button');
-          const menu = document.getElementById('menu');
-
-          menuButton.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-          });
-
-        function scrollToSection(event, sectionId) {
-        event.preventDefault();
-        const section = document.getElementById(sectionId);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        }
-      </script>
-      </div>
-    </header>
+    <!-- Header -->
+    <div data-component="header"></div>
 
     <main class="space-y-16">
       <!-- Hero section -->
-      <section id="company" class="relative bg-custom-slate py-12 bg-center bg-cover" style="min-height: 600px;">
-        
-        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
-          <div class="p-8 rounded-lg text-justify max-w-lg">
-            <p class="p-noto-sans top-bottom-margins md:text-lg">
-              <i class="material-icons text-yellow-300 mr-2">lightbulb</i>
-              We believe in a world where Artificial Intelligence simplifies complexity and drives sustainable success for businesses. Our mission is to
-              make cutting-edge AI accessible and impactful for companies of all sizes.
-            </p>
-          </div>
-        </div>
-        <div class="w-full text-center py-8">
-          <h1 class="font-bold text-white text-[20vw] leading-none w-full text-center">
-            <span class="inline-block">Evolver</span><span class="text-blue-800 inline-block">AI</span>
-          </h1>
-        </div>
-      </section>
+      <div data-component="home/hero-section"></div>
+      
+      <!-- About section -->
+      <div data-component="home/about-section"></div>
 
-      <section id="about" class="relative bg-custom-slate py-12 bg-center bg-cover"
-        style="background-image: url('img/evolverai-web-company-bg.jpg'); min-height: 600px;">
-        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
-          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-lg">
-            <p class="p-noto-sans top-bottom-margins md:text-lg">
-              At Evolver<span class="text-blue-800">AI</span>, we specialize in developing smart, innovative solutions that empower companies to thrive in the
-              modern digital landscape. By seamlessly integrating Artificial Intelligence into your business processes, we help
-              you unlock new levels of efficiency, accuracy, and growth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="brainstorming" class="relative bg-custom-slate py-12">
-        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
-          <h1 class="h1-noto-sans mb-4">What we do</h1>
-        </div>
-        <div class="container mx-auto px-4 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6">
-              <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
-                <span class="material-icons text-blue-600 text-4xl mb-4">check_circle</span>
-                <h3 class="font-semibold mb-2">Customized AI Solutions</h3>
-                <p class="text-center">
-                  Tailored systems that meet your unique business needs.
-                </p>
-              </div>
-              <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
-                <span class="material-icons text-blue-600 text-4xl mb-4">insights</span>
-                <h3 class="font-semibold mb-2">Data-Driven Insights</h3>
-                <p class="text-center">
-                  Advanced analytics to transform your data into actionable strategies.
-                </p>
-              </div>
-              <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
-                <span class="material-symbols-outlined text-blue-600 text-4xl mb-4">automation</span>
-                <h3 class="font-semibold mb-2">Process Automation</h3>
-                <p class="text-center">
-                  Streamlined workflows to save time and reduce costs.
-                </p>
-              </div>
-              <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
-                <span class="material-icons text-blue-600 text-4xl mb-4">scale</span>
-                <h3 class="font-semibold mb-2">Scalable Systems</h3>
-                <p class="text-center">
-                  Future-ready technologies that grow with your business.
-                </p>
-              </div>
-            </div>
-        </div>
-      </section>
-
-      <section id="brainstorming" class="relative bg-custom-slate py-12 bg-center bg-cover"
-        style="background-image: url('img/evolverai-web-brainstorming-bg.jpg'); min-height: 600px;">
-        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
-          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-lg">
-            <p class="p-noto-sans top-bottom-margins md:text-lg">
-              At Evolver<span class="text-blue-800">AI</span>, we are waiting for you
-              to join us in the journey of innovation and growth. We are here to
-              help you unlock the potential of AI and transform your business
-              operations. Let's brainstorm together and create a brighter future
-              for your company.
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <!-- Services section -->
+      <div data-component="home/services-section"></div>
+      
+      <!-- Brainstorming section -->
+      <div data-component="home/brainstorming-section"></div>
+      
       <!-- Features section -->
-      <section id="features" class="relative bg-custom-slate py-12">
-        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
-          <h1 class="h1-noto-sans mb-4">Evolver<span class="text-blue-800">AI</span>: Redefining Excellence</h1>
-        </div>
-        <div class="container mx-auto px-4 py-8">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
-              <span class="material-icons text-blue-600 text-4xl mb-4">check_circle</span>
-              <h3 class="font-semibold mb-2">Practical AI Applications</h3>
-              <p class="text-center">
-                Delivering practical AI applications that create immediate value.
-              </p>
-            </div>
-            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
-              <span class="material-icons text-blue-600 text-4xl mb-4">handshake</span>
-              <h3 class="font-semibold mb-2">Client Collaboration</h3>
-              <p class="text-center">
-                Collaborating closely with our clients to understand their challenges and goals.
-              </p>
-            </div>
-            <div class="bg-white text-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center">
-              <span class="material-icons text-blue-600 text-4xl mb-4">lightbulb</span>
-              <h3 class="font-semibold mb-2">Forward-Thinking Technology</h3>
-              <p class="text-center">
-                Maintaining a forward-thinking approach to technology and innovation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Product section -->
-      <section id="product" class="relative bg-custom-slate py-12 bg-center bg-cover"
-        style="background-image: url('img/evolverai-web-products-bg.jpg'); min-height: 600px;">
-        <a name="product"></a>
-        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
-          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-lg">
-            <p class="p-noto-sans top-bottom-margins md:text-lg">
-              Empowering Your Vision with Innovative Software Solutions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-        
-
+      <div data-component="home/features-section"></div>
+            
+      <!-- B2B Outsourcing section -->
+      <div data-component="home/b2b-outsourcing-section"></div>
+      
+      <!-- Product intro section -->
+      <!--
+      <div data-component="product-intro"></div>
+      -->
+      
       <!-- Product WFM section -->
-      <section id="product_wfm" class="relative bg-custom-slate py-12">
-        <div class="container mx-auto px-4 flex justify-start items-center h-full relative z-10">
-          <h1 class="h1-noto-sans mb-4">Our Software Solutions</h1>
-        </div>
-        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-start items-center h-full relative z-10">
-          <div class="w-full md:w-1/2 mb-4 md:mb-0">
-            <img src="img/evolverai-web-wfm-bg.jpg" alt="Workforce Manager" class="rounded-lg shadow-lg">
-          </div>
-          <div class="w-full md:w-1/2 p-6 rounded-lg text-left flex flex-col justify-start">
-            <h2 class="h2-noto-sans mb-4">
-              Workforce Manager
-            </h2>
-            <p class="p-noto-sans md:text-lg">
-              Workforce Manager is an advanced tool designed to streamline shift
-              planning and workforce management. Harness the power of AI and an
-              automated chatbot for efficient communication, scheduling, and
-              productivity enhancements.
-            </p>
-            <button onclick="window.location.href='more_wfm.html';"
-              class="bg-blue-600 text-white py-2 px-4 rounded-lg text-lg shadow-lg hover:bg-blue-700 transition duration-300 mt-4">
-              Tell me more
-            </button>
-          </div>
-        </div>
-      </section>
-
+      <div data-component="home/product-wfm"></div>
+      
       <!-- Product Elysia section -->
-      <section id="product_elysia" class="relative bg-custom-slate py-12">
-        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-        <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row justify-start items-center h-full relative z-10">
-          <div class="w-full md:w-1/2 p-6 rounded-lg text-left flex flex-col justify-start">
-            <h2 class="h2-noto-sans mb-4">
-              Elysia: Your AI-Powered Assistant
-            </h2>
-            <p class="p-noto-sans md:text-lg">
-              Elysia is more than just a bot—it's your organization's new best friend. Powered by cutting-edge AI, Elysia streamlines
-              operations by automating repetitive tasks and reducing workloads, giving your team more time to focus on what truly
-              matters.
-              Whether it's managing workflows, handling routine queries, or optimizing processes, Elysia works tirelessly behind the
-              scenes to boost efficiency and productivity. Say goodbye to manual effort and hello to a smarter, more seamless way of
-              working.
-              Transform your organization with Elysia and unlock the potential of AI today!
-            </p>
-            <button
-              onclick="window.location.href='more_elysia.html';"
-              class="bg-blue-600 text-white py-2 px-4 rounded-lg text-lg shadow-lg hover:bg-blue-700 transition duration-300 mt-4"
-            >
-              Tell me more
-            </button>
-          </div>
-          <div class="w-full md:w-1/2 mb-4 md:mb-0">
-            <img src="img/evolverai-web-elysia-bg.jpg" alt="Elysia" class="rounded-lg shadow-lg">
-          </div>
-        </div>
-      </section>
-
+      <div data-component="home/product-elysia"></div>
+      
       <!-- Contact section -->
-      <section id="contact" class="relative bg-custom-slate py-12 bg-center bg-cover" style="background-image: url('img/evolverai-web-contact-bg.jpg'); min-height: 600px;">
-        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
-        <div class="container mx-auto px-4 flex justify-end items-center h-full relative z-10">
-          <div class="bg-black bg-opacity-75 p-6 rounded-lg text-right max-w-md">
-            <h2 class="h2-noto-sans mb-4">Contact Us</h2>
-            <p class="p-noto-sans md:text-lg mb-4">
-              Have questions or want to learn more? Reach out to us, and we’ll get
-              back to you promptly.
-            </p>
-            <button
-              onclick="window.location.href='contact.html';"
-              class="bg-blue-600 text-white py-2 px-4 rounded-lg text-lg shadow-lg hover:bg-blue-700 transition duration-300"
-            >
-              Get in Touch
-            </button>
-          </div>
-        </div>
-      </section>
+      <div data-component="home/contact-section"></div>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-gray-200 py-8">
-      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start">
-        <!-- 3/4 Section -->
-        <div class="md:w-2/4 mb-8 md:mb-0">
-          <h2 class="text-2xl font-bold mb-4">Let's talk, tell us about your needs</h2>
-          <p class="mb-4">
-            We are here to help you unlock the potential of AI and transform your business operations. Let's brainstorm together and create a brighter future for your company.
-          </p>
-          <button onclick="window.location.href='form.html';"
-            class="bg-green-600 text-white py-2 px-4 rounded-lg text-lg shadow-lg hover:bg-green-700 transition duration-300">
-            Tell us about your project
-          </button>
-        </div>
-        <!-- 1/4 Section -->
-        <div class="md:w-1/4 flex flex-col space-y-4">
-            <div class="grid grid-cols-2 gap-4">
-              <div>
-                <h3 class="h3-noto-sans text-orange-300">Email:</h3>
-                <a href="mailto:info@evolverai.ch" class="underline">info@evolverai.ch</a>
-              </div>
-              <div>
-                <h3 class="h3-noto-sans text-orange-300">Phone:</h3>
-                <a href="tel:+41792156801" class="underline">+41 79 215 6801</a>
-              </div>
-              <div class="col-span-2">
-                <h3 class="h3-noto-sans text-orange-300">Address:</h3>
-                <p>EvolverAI GmbH</p>
-                <p>Zwydenweg, 3</p>
-                <p>CH-6052 Hergiswil</p>
-                <p>Switzerland</p>
-              </div>
-            </div>
-          <div class="flex space-x-4 mt-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      <p class="text-center">&copy; 2024 Evolver<span class="text-blue-800">AI</span> GmbH. All rights reserved.</p>
-    </footer>
+    <div data-component="footer"></div>
   </body>
 </html>
